@@ -12,33 +12,25 @@ import (
 func main() {
 	start_date := time.Date(2017, 10, 16, 0, 0, 0, 0, time.UTC)
 	end_date := time.Date(2017, 10, 23, 0, 0, 0, 0, time.UTC)
-	envlozi := make([]string, 2, 2)
-	envlozi[0] = "envlog.csv"
-	envlozi[1] = "envlog(1).csv"
+	envlozi := []string{"envlog.csv", "envlog(1).csv"}
 	fajl, _ := os.Open("data_log.txt")
 	defer fajl.Close()
 	citac := bufio.NewScanner(fajl)
-
 	ss1, _ := os.Create("ss1.csv")
 	ss1.WriteString("Date,TempSS1\n")
 	defer ss1.Close()
-
 	ss24, _ := os.Create("ss24.csv")
 	ss24.WriteString("Date,TempSS24\n")
 	defer ss24.Close()
-
 	hum, _ := os.Create("humidity.csv")
 	hum.WriteString("Date,Humidity\n")
 	defer hum.Close()
-
 	pla, _ := os.Create("plafon.csv")
 	pla.WriteString("Date,Plafon\n")
 	defer pla.Close()
-
 	ss2, _ := os.Create("novss2.csv")
 	ss2.WriteString("Date,Temperature,Humidity\n")
 	defer ss2.Close()
-
 	oh, _ := os.Create("novoh.csv")
 	oh.WriteString("Date,Temperature,Humidity\n")
 	defer oh.Close()
@@ -93,5 +85,4 @@ func main() {
 			}
 		}
 	}
-
 }
