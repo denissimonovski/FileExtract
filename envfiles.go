@@ -11,7 +11,7 @@ import (
 
 func main() {
 	start_date := time.Date(2017, 10, 16, 0, 0, 0, 0, time.UTC)
-	end_date := time.Date(2017, 10, 22, 0, 0, 0, 0, time.UTC)
+	end_date := time.Date(2017, 10, 23, 0, 0, 0, 0, time.UTC)
 	envlozi := make([]string, 2, 2)
 	envlozi[0] = "envlog.csv"
 	envlozi[1] = "envlog(1).csv"
