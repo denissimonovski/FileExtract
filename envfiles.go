@@ -17,8 +17,8 @@ func main() {
 	fmt.Scan(&end)
 	startan_datum, _ := time.Parse("01-02", start)
 	krajan_datum, _ := time.Parse("01-02", end)
-	start_date := time.Date(2017, startan_datum.Month(), startan_datum.Day(), 0, 0, 0, 0, time.UTC)
-	end_date := time.Date(2017, krajan_datum.Month(), krajan_datum.Day(), 0, 0, 0, 0, time.UTC)
+	start_date := time.Date(2018, startan_datum.Month(), startan_datum.Day(), 0, 0, 0, 0, time.UTC)
+	end_date := time.Date(2018, krajan_datum.Month(), krajan_datum.Day(), 0, 0, 0, 0, time.UTC)
 	envlozi := []string{"envlog.csv", "envlog(1).csv"}
 	fajl, _ := os.Open("data_log.txt")
 	defer fajl.Close()
